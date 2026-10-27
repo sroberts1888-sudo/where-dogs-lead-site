@@ -88,13 +88,20 @@
       .launch-status { text-align:left; }
     }
     @media(prefers-reduced-motion:reduce) { html {scroll-behavior:auto;} }
-  </style>
+  
+    /* Reuse the original lavender paw-and-route logo throughout the launch header. */
+    .launch-page { --official-paw-logo: url("data:image/webp;base64,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"); }
+    .launch-page .brand-symbol { background: var(--official-paw-logo) center / cover no-repeat; }
+    .launch-page .launch-banner .announcement-logo { display:inline-block; vertical-align:middle; width:24px; height:24px; margin-right:9px; border-radius:7px; background:var(--official-paw-logo) center / cover no-repeat; }
+    .launch-page .launch-paw-float { width:58px; height:58px; padding:0; background:var(--official-paw-logo) center / cover no-repeat; }
+    @media(max-width:600px){ .launch-page .launch-paw-float { width:48px; height:48px; } }
+</style>
 </head>
 <body class="launch-page">
-  <div class="launch-banner"><span aria-hidden="true">🐾</span> Something pawsome is on the way — arriving soon on Android</div>
+  <div class="launch-banner"><span class="announcement-logo" aria-hidden="true"></span> Something pawsome is on the way — arriving soon on Android</div>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Where Dogs Lead home">
-      <span class="brand-symbol" aria-hidden="true">🐾</span><span>Where Dogs Lead</span>
+      <span class="brand-symbol" aria-hidden="true"></span><span>Where Dogs Lead</span>
     </a>
     <nav aria-label="Main navigation">
       <a href="#features">Features</a>
@@ -138,7 +145,7 @@
             <g font-family="system-ui,sans-serif" fill="#65785e" font-size="13" font-weight="700"><text x="23" y="247">THE GREEN</text><text x="265" y="384">WALKING TRAIL</text></g>
           </svg>
         </div>
-        <div class="launch-paw-float" aria-hidden="true">🐾</div>
+        <div class="launch-paw-float" aria-hidden="true"></div>
         <div class="launch-map-label"><span>Every adventure counts</span>One more walk to remember 💜</div>
       </div>
     </section>
