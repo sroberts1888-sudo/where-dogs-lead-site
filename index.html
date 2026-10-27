@@ -1,71 +1,168 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Where Dogs Lead — a dog walking companion for recording adventures, routes, memories and more.">
-  <title>Where Dogs Lead</title>
+  <meta name="theme-color" content="#f8f5fc">
+  <meta name="description" content="Where Dogs Lead is coming soon to Google Play. Track dog walks, save routes and photos, and remember every adventure together. Walk. Sniff. Repeat.">
+  <meta property="og:title" content="Where Dogs Lead — Coming Soon">
+  <meta property="og:description" content="Walk. Sniff. Repeat. A new dog-walking companion is coming soon to Android.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wheredogslead.co.uk/">
+  <title>Coming Soon to Google Play | Where Dogs Lead</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Launch announcement styles: scoped to this homepage only. */
+    .launch-page { overflow: hidden; }
+    .launch-page .site-header { max-width: 1200px; }
+    .launch-page .brand { font-size: 1.2rem; letter-spacing: -.025em; }
+    .launch-page .brand-symbol { width: 43px; height: 43px; display: grid; place-items: center; color: #fff; background: #6546a8; border-radius: 14px; box-shadow: 0 8px 20px rgba(87,55,156,.22); font-size: 1.35rem; }
+    .launch-page nav a:focus-visible, .launch-page a:focus-visible { outline: 3px solid #9b7bed; outline-offset: 4px; border-radius: 4px; }
+    .launch-banner { background: #6445a8; color: #fff; padding: 10px 20px; text-align: center; font-size: .88rem; font-weight: 700; letter-spacing: .015em; }
+    .launch-banner span { display: inline-block; margin-right: 8px; }
+    .launch-container { width: min(1200px, calc(100% - 44px)); margin-left: auto; margin-right: auto; }
+    .launch-hero { margin-top: 20px; background: linear-gradient(120deg,#fff 5%,#f8f3ff 65%,#f3ebfc); border: 1px solid #e9e0f0; border-radius: 34px; box-shadow: 0 20px 50px rgba(49,31,90,.07); display:grid; grid-template-columns: 1.05fr .95fr; align-items: center; min-height: 570px; gap: 26px; padding: clamp(28px,5vw,65px); position: relative; isolation: isolate; }
+    .launch-hero::before { content:""; position:absolute; z-index:-1; width:380px; height:380px; right:-90px; top:-100px; border-radius:50%; background:radial-gradient(circle,rgba(156,129,215,.24),transparent 69%); }
+    .launch-kicker { display:inline-flex; align-items:center; gap:9px; color:#5d3ca0; background:#eee7fb; border:1px solid #dfd1f7; padding:7px 14px; border-radius:30px; font-size:.78rem; text-transform:uppercase; letter-spacing:.11em; font-weight:800; }
+    .launch-kicker-dot { width:8px; height:8px; border-radius:50%; background:#6e50bc; box-shadow:0 0 0 4px #dfd1fa; }
+    .launch-hero h1 { max-width: 680px; font-size:clamp(2.9rem,5.4vw,5.1rem); line-height:1.04; letter-spacing:-.065em; margin:25px 0 15px; color:#22202b; }
+    .launch-hero h1 em { font-style:normal; color:#6b49b2; }
+    .launch-tagline { font-size:clamp(1.15rem,2.1vw,1.45rem); color:#4c376b; font-weight:800; margin:0 0 18px; }
+    .launch-intro { color:#55505f; font-size:1.09rem; max-width:510px; line-height:1.7; margin:0; }
+    .launch-buttons { display:flex; gap:12px; flex-wrap:wrap; margin:30px 0 16px; align-items:center; }
+    .launch-pill { display:inline-flex; align-items:center; gap:10px; border-radius:15px; padding:14px 22px; font-size:.95rem; font-weight:800; text-decoration:none; }
+    .launch-primary { color:#fff; background:#6948ad; box-shadow:0 11px 24px rgba(105,72,173,.24); }
+    .launch-secondary { color:#543b84; background:#fff; border:1px solid #ded2ef; }
+    .launch-secondary:hover { background:#f3ecfe; }
+    .launch-note { display:flex; align-items:flex-start; gap:8px; color:#746e7b; font-size:.83rem; line-height:1.5; margin:0; }
+    .launch-note svg { flex:0 0 16px; margin-top:2px; }
+    .launch-art { position:relative; min-height:445px; display:flex; align-items:center; justify-content:center; }
+    .launch-map { background:#f5f9ef; width:100%; max-width:490px; border:9px solid #fff; border-radius:30px; box-shadow:0 25px 54px rgba(66,47,93,.17); overflow:hidden; transform:rotate(3deg); }
+    .launch-map svg { display:block; width:100%; height:auto; }
+    .launch-map-label { position:absolute; bottom:8px; left:18px; color:#4f3d72; padding:12px 17px; background:#fff; border:1px solid #eee6f4; box-shadow:0 15px 26px rgba(52,42,68,.12); border-radius:17px; transform:rotate(-4deg); font-size:.88rem; font-weight:750; }
+    .launch-map-label span { display:block; color:#8a8291; font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.065em; }
+    .launch-paw-float { position:absolute; top:5px; right:-5px; font-size:2.5rem; background:#fff; border:1px solid #eee8f2; padding:10px; border-radius:18px; transform:rotate(11deg); box-shadow:0 14px 22px rgba(55,42,89,.12); }
+    .launch-section { padding:85px 0 30px; }
+    .launch-section-head { max-width:780px; margin:0 auto 34px; text-align:center; }
+    .launch-eyebrow { font-size:.76rem; text-transform:uppercase; letter-spacing:.15em; color:#6d4bad; font-weight:850; margin:0 0 9px; }
+    .launch-section h2 { margin:0; color:#292333; font-size:clamp(2rem,3.8vw,3rem); line-height:1.14; letter-spacing:-.045em; }
+    .launch-section-lead { color:#696271; max-width:620px; margin:15px auto 0; }
+    .launch-features { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+    .launch-feature { background:#fff; border:1px solid #e7deed; border-radius:23px; padding:26px; min-height:235px; box-shadow:0 9px 22px rgba(55,41,85,.035); }
+    .launch-feature-icon { width:54px; height:54px; background:#f1e9ff; border-radius:17px; display:grid; place-items:center; font-size:1.65rem; margin-bottom:19px; }
+    .launch-feature h3 { font-size:1.12rem; line-height:1.25; letter-spacing:-.02em; margin:0 0 9px; }
+    .launch-feature p { color:#706978; margin:0; font-size:.93rem; line-height:1.6; }
+    .launch-bottom { margin-top:60px; margin-bottom:72px; padding:36px 42px; background:#2f2448; color:#fff; border-radius:26px; display:flex; justify-content:space-between; align-items:center; gap:25px; }
+    .launch-bottom h2 { font-size:clamp(1.5rem,3vw,2.2rem); letter-spacing:-.035em; margin:0 0 8px; color:#fff; }
+    .launch-bottom p { color:#d9d1e8; margin:0; max-width:640px; }
+    .launch-status { text-align:center; flex:0 0 auto; background:#46355f; padding:16px 23px; border:1px solid #74618f; border-radius:17px; font-weight:800; }
+    .launch-status small { display:block; font-weight:500; color:#d5c8e9; margin-top:3px; }
+    .launch-page footer { max-width:1200px; }
+    @media(max-width:950px) {
+      .launch-hero { grid-template-columns:1fr; padding:45px 38px 24px; }
+      .launch-hero h1 { max-width:720px; }
+      .launch-art { min-height:350px; max-width:530px; width:100%; margin:0 auto; }
+      .launch-map { max-width:400px; }
+      .launch-features { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media(max-width:600px) {
+      .launch-container { width:calc(100% - 26px); }
+      .launch-page .site-header { align-items:center; padding-top:0; gap:10px; }
+      .launch-page .brand { font-size:1rem; }
+      .launch-page .brand-symbol { width:36px; height:36px; border-radius:11px; }
+      .launch-page nav { gap:12px; font-size:.82rem; }
+      .launch-banner { font-size:.77rem; }
+      .launch-hero { margin-top:10px; padding:34px 22px 25px; gap:5px; border-radius:24px; }
+      .launch-hero h1 { font-size:clamp(2.65rem,12vw,4rem); margin-top:21px; }
+      .launch-intro { font-size:1rem; }
+      .launch-buttons { margin-top:24px; }
+      .launch-pill { width:100%; justify-content:center; text-align:center; }
+      .launch-art { min-height:270px; margin-top:19px; }
+      .launch-map { width:92%; max-width:335px; border-width:6px; border-radius:22px; }
+      .launch-paw-float { top:0; right:0; font-size:1.6rem; }
+      .launch-map-label { left:0; bottom:0; font-size:.75rem; }
+      .launch-section { padding-top:62px; }
+      .launch-features { grid-template-columns:1fr; gap:12px; }
+      .launch-feature { min-height:0; padding:23px; }
+      .launch-bottom { margin-top:40px; margin-bottom:45px; padding:30px 24px; flex-direction:column; align-items:stretch; }
+      .launch-status { text-align:left; }
+    }
+    @media(prefers-reduced-motion:reduce) { html {scroll-behavior:auto;} }
+  </style>
 </head>
-<body>
+<body class="launch-page">
+  <div class="launch-banner"><span aria-hidden="true">🐾</span> Something pawsome is on the way — arriving soon on Android</div>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Where Dogs Lead home">
-      <span class="paw" aria-hidden="true">🐾</span>
-      <span>Where Dogs Lead</span>
+      <span class="brand-symbol" aria-hidden="true">🐾</span><span>Where Dogs Lead</span>
     </a>
     <nav aria-label="Main navigation">
-      <a href="privacy.html">Privacy</a>
+      <a href="#features">Features</a>
       <a href="support.html">Support</a>
     </nav>
   </header>
-
   <main>
-    <section class="hero">
-      <div class="hero-card">
-        <div class="hero-paw" aria-hidden="true">🐾</div>
-        <p class="eyebrow">Dog walks, remembered.</p>
-        <h1>Where Dogs Lead</h1>
-        <p class="tagline">Walk. Sniff. Repeat.</p>
-        <p class="intro">
-          Record your dog walks, keep the routes and memories that matter,
-          and look back on every adventure you shared together.
-        </p>
-        <div class="actions">
-          <a class="button primary" href="support.html">Support</a>
-          <a class="button secondary" href="privacy.html">Privacy Policy</a>
+    <section class="launch-hero launch-container" aria-labelledby="launch-title">
+      <div class="launch-copy">
+        <p class="launch-kicker"><span class="launch-kicker-dot" aria-hidden="true"></span> Coming soon to Google Play</p>
+        <h1 id="launch-title">Every walk has a story. <em>Keep yours.</em></h1>
+        <p class="launch-tagline">Walk. Sniff. Repeat.</p>
+        <p class="launch-intro">From everyday strolls to muddy adventures, Where Dogs Lead helps you track your dog's walks, save favourite routes and hold on to the moments that matter.</p>
+        <div class="launch-buttons">
+          <span class="launch-pill launch-primary" role="status" aria-label="Android app coming soon">🐕 &nbsp;Android app coming soon</span>
+          <a class="launch-pill launch-secondary" href="#features">Discover what's inside ↓</a>
         </div>
-        <p class="coming-soon">Where Dogs Lead is currently in development.</p>
+        <p class="launch-note">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Our launch version has been submitted to Google Play for review. We'll add the download link when it's live.
+        </p>
+      </div>
+      <div class="launch-art">
+        <div class="launch-map" aria-label="Illustration of a winding walking trail through green countryside" role="img">
+          <svg viewBox="0 0 480 470" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="480" height="470" fill="#edf3e4"/>
+            <path d="M0 47 Q105 10 170 97 T360 108 T480 60 V0 H0Z" fill="#d2e4c5"/>
+            <path d="M0 358 Q108 302 202 390 T480 346 V470 H0Z" fill="#d0e2c4"/>
+            <path d="M355 0 Q287 114 365 180 T430 320 T480 410" fill="none" stroke="#d5dfcb" stroke-width="33"/>
+            <path d="M355 0 Q287 114 365 180 T430 320 T480 410" fill="none" stroke="#fff" stroke-width="21"/>
+            <path d="M0 195 Q150 159 204 196 T480 198" fill="none" stroke="#d8e2cf" stroke-width="24"/>
+            <path d="M0 195 Q150 159 204 196 T480 198" fill="none" stroke="#fff" stroke-width="15"/>
+            <path d="M-20 74 Q75 110 112 62 T259 73 T480 83" fill="none" stroke="#dde7d0" stroke-width="15"/>
+            <g fill="#accd9d"><circle cx="44" cy="64" r="21"/><circle cx="95" cy="133" r="23"/><circle cx="137" cy="321" r="28"/><circle cx="328" cy="291" r="26"/><circle cx="447" cy="112" r="19"/><circle cx="267" cy="49" r="23"/><circle cx="63" cy="432" r="24"/><circle cx="389" cy="427" r="20"/></g>
+            <g fill="#92bd85"><circle cx="45" cy="60" r="10"/><circle cx="99" cy="137" r="11"/><circle cx="141" cy="317" r="14"/><circle cx="327" cy="288" r="12"/><circle cx="450" cy="113" r="9"/><circle cx="266" cy="51" r="11"/></g>
+            <path d="M102 384 C57 312 143 279 158 232 S99 141 184 125 S294 152 280 221 S354 308 396 255" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M102 384 C57 312 143 279 158 232 S99 141 184 125 S294 152 280 221 S354 308 396 255" fill="none" stroke="#754cb6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 1"/>
+            <circle cx="102" cy="384" r="19" fill="#fff"/><circle cx="102" cy="384" r="11" fill="#6545a8"/>
+            <circle cx="396" cy="255" r="25" fill="#fff"/><circle cx="396" cy="255" r="17" fill="#6545a8"/>
+            <path d="M388 254l6 6 11-13" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+            <g font-family="system-ui,sans-serif" fill="#65785e" font-size="13" font-weight="700"><text x="23" y="247">THE GREEN</text><text x="265" y="384">WALKING TRAIL</text></g>
+          </svg>
+        </div>
+        <div class="launch-paw-float" aria-hidden="true">🐾</div>
+        <div class="launch-map-label"><span>Every adventure counts</span>One more walk to remember 💜</div>
       </div>
     </section>
-
-    <section class="features" aria-label="App features">
-      <article>
-        <span aria-hidden="true">📍</span>
-        <h2>Track adventures</h2>
-        <p>Record the route, distance and duration of your walks.</p>
-      </article>
-      <article>
-        <span aria-hidden="true">📷</span>
-        <h2>Keep memories</h2>
-        <p>Add photos to the walks you want to remember.</p>
-      </article>
-      <article>
-        <span aria-hidden="true">🐕</span>
-        <h2>Made for dogs</h2>
-        <p>Keep profiles for the dogs who join you on each adventure.</p>
-      </article>
+    <section class="launch-section launch-container" id="features" aria-labelledby="features-title">
+      <div class="launch-section-head">
+        <p class="launch-eyebrow">Made for dog lovers</p>
+        <h2 id="features-title">More than just another walk.</h2>
+        <p class="launch-section-lead">Everything you need to remember where you've been and who was by your side.</p>
+      </div>
+      <div class="launch-features">
+        <article class="launch-feature"><span class="launch-feature-icon" aria-hidden="true">📍</span><h3>Track the journey</h3><p>Record your GPS route, distance and walking time as you explore.</p></article>
+        <article class="launch-feature"><span class="launch-feature-icon" aria-hidden="true">📷</span><h3>Save the memories</h3><p>Keep photos and favourite walks together, ready to revisit.</p></article>
+        <article class="launch-feature"><span class="launch-feature-icon" aria-hidden="true">🐕</span><h3>Celebrate your dogs</h3><p>Create profiles for the four-legged companions who share your adventures.</p></article>
+        <article class="launch-feature"><span class="launch-feature-icon" aria-hidden="true">🗺️</span><h3>Discover places</h3><p>Explore dog-friendly places and shared discoveries from the community.</p></article>
+      </div>
     </section>
+    <aside class="launch-bottom launch-container" aria-label="Launch status">
+      <div><h2>Good walks are worth remembering.</h2><p>Where Dogs Lead is almost ready for its first adventures. Check back for the Google Play download link once the release is approved and published.</p></div>
+      <div class="launch-status">🐾 &nbsp;Coming very soon<small>Android · Google Play</small></div>
+    </aside>
   </main>
-
   <footer>
     <p>© 2026 Where Dogs Lead</p>
-    <p>
-      <a href="privacy.html">Privacy</a>
-      <span aria-hidden="true">·</span>
-      <a href="support.html">Support</a>
-      <span aria-hidden="true">·</span>
-      <a href="account-deletion.html">Account deletion</a>
-    </p>
+    <p><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="account-deletion.html">Account deletion</a> · <a href="community-terms.html">Community Terms</a></p>
   </footer>
 </body>
 </html>
